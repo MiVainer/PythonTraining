@@ -51,3 +51,16 @@ print(y)
 print(w)
 print(e)
 print(f'{e}{y}{w}')
+print('--------------------------------------------------------------------------------------')
+
+g = 'astralinux'
+e = g[::-1] #Переворачиваем строку в обратном порядке
+print(g, e)
+
+# Данная функция проверяет использовалась ли подстрока в строке
+def search_subst(subst, st):
+    if subst.lower() in st.lower():
+        return 'Есть контакт!'
+    else:
+        return 'Мимо!'
+print(search_subst('so', 'suroksoakasososika'))

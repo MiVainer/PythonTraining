@@ -58,3 +58,16 @@ for i in a:
         if i == k:
             c.append(i)
 print(c)'''
+
+'''# Задача № 3. Написать функцию, которая принимает список элементов и возвращает только целые числа.
+
+def return_only_integer(lst):
+    integers = []
+    for i in lst:
+        if type(i) is int:
+            integers.append(i)
+    return integers
+
+lst = [1, 5, 7, 'a', 'ww', '22']
+print(return_only_integer(lst))'''
+
