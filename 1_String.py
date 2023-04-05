@@ -1,12 +1,12 @@
-a = 'This string is very big'
+'''a = 'This string is very big'
 s = a[1:4] # У символов в строке есть свои индексы, символы начинаются с индекса 0
 print('В указанном диапазоне находятся следующие символы: '+ s)
 
 b = str(len(a))
 print('В строке ' + b + ' символов')
 
-'''c = input('Введи текст: ')
-print(c)'''
+c = input('Введи текст: ')
+print(c)
 
 # Форматирование строк
 a = 'sobaka bivaet kusachei'
@@ -24,8 +24,8 @@ print('-------------------------------------------------------------------------
 b = "       , baba  Vera .             "
 print(b)
 b = b.strip() # Стирает пробелы справа и слева (rstrip - справа, lstrip - слева)
-print(b)
-b = b.strip(".") # Стираем точки
+print(b)'''
+'''b = b.strip(".") # Стираем точки
 print(b)
 b = b.strip(",") # Стираем запятые
 print(b)
@@ -63,4 +63,18 @@ def search_subst(subst, st):
         return 'Есть контакт!'
     else:
         return 'Мимо!'
-print(search_subst('so', 'suroksoakasososika'))
+print(search_subst('so', 'suroksoakasososika'))'''
+
+def first_last(letter, st):
+    b = []
+    for i in st:
+        a = st.find(f'{i}')
+        if i == letter:
+            b.append(a)
+            return b
+        else:
+            continue
+
+st = 'sdfjkhsldjfhjksdfbljsdfkbsfbsf'
+letter = 's'
+print(first_last(letter, st))
