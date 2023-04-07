@@ -63,18 +63,23 @@ def search_subst(subst, st):
         return 'Есть контакт!'
     else:
         return 'Мимо!'
-print(search_subst('so', 'suroksoakasososika'))'''
+print(search_subst('so', 'suroksoakasososika'))
 
+
+# Функция по поиску индексов искомого элемента, входящего несколько раз в строку, вывод индексов списком.
 def first_last(letter, st):
     b = []
-    for i in st:
-        a = st.find(f'{i}')
-        if i == letter:
-            b.append(a)
-            return b
+    last_index = -1
+    while True:
+        try:
+            last_index = st.index(letter, last_index+1)
+        except ValueError:
+            break
         else:
-            continue
+            b.append(last_index)
+    return b
 
-st = 'sdfjkhsldjfhjksdfbljsdfkbsfbsf'
+st = 'dsfjkhsldjfhjksdfbljsdfkbsfbsf'
 letter = 's'
-print(first_last(letter, st))
+print(first_last(letter, st))'''
+
