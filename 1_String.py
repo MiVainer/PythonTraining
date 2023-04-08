@@ -1,4 +1,9 @@
-'''a = 'This string is very big'
+'''# Работа со строками
+chr(67) # Возвращает символ № 10 из таблицы Unicode
+
+ord(c) # Возвращает номер символа c из таблицы Unicode.
+
+a = 'This string is very big'
 s = a[1:4] # У символов в строке есть свои индексы, символы начинаются с индекса 0
 print('В указанном диапазоне находятся следующие символы: '+ s)
 
@@ -82,4 +87,12 @@ def first_last(letter, st):
 st = 'dsfjkhsldjfhjksdfbljsdfkbsfbsf'
 letter = 's'
 print(first_last(letter, st))'''
+
+# Сформировать строку из элементов таблицы Unicod (Прописные и строчные буквы русского языка)
+a = ""
+for i in range(1040, 1103 + 1):
+    a = a + chr(i)
+    if chr(i) == 'Я':
+        a = a + '\n'
+print(*a, sep=', ')
 
