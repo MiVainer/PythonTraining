@@ -12,3 +12,8 @@ print(PhoneNumbers.keys()) # Вывод ключей словаря
 print(PhoneNumbers.values()) # Вывод значений словаря
 print(PhoneNumbers.__len__()) # Вывод размера словаря
 print(*sorted(PhoneNumbers), sep = ', ')
+del(PhoneNumbers["Михаил"]) # Удаляем элемент словаря
+print(PhoneNumbers)
+#PhoneNumbers.clear() # Удаляем все элементы словаря
+#print(PhoneNumbers)
+print("Папа" in PhoneNumbers) #Проверка на вхождение
