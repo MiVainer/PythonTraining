@@ -88,7 +88,7 @@ print(return_only_integer(lst))'''
 print(*a, sep = ", ") # Знак * используется для разделения элементов списка выбранным символом
 
 for i in a:
-    print(i.title())'''
+    print(i.title())
 
 # Создаём список
 new_list = list(range(1, 10))
@@ -97,5 +97,34 @@ print(*new_list, sep=", ")
 print(*new_list[::-1]) #Переворачиваем список
 
 print(max(new_list)) # Максимальное значение в списке
-print(sum(new_list)) # Суммирует элементы списка
+print(sum(new_list)) # Суммирует элементы списка 
 
+
+def unique_list(numbers):
+    new_numbers = []
+    sort_numbers = sorted(numbers)
+    print(f'Вот сортированный по возрастанию искомый список - {sort_numbers}')
+    for i in range(1, len(sort_numbers)-1):
+        if sort_numbers[i] != sort_numbers[i-1]:
+            new_numbers.append(sort_numbers[i])
+    return new_numbers 
+
+numbers = [1, 2, 3, 3, 5, 7, 0, 2, 4, 5, 9, 7, 8]
+print(unique_list(numbers)) 
+
+
+# Задача. На входе список с повторящюимися числами, вывести отсортированный список с уникальными числами
+
+new_numbers = []
+sort_numbers = sorted(numbers)
+print(f'Вот сортированный по возрастанию искомый список - {sort_numbers}')
+for i in range(0, len(sort_numbers)-1):
+    if (sort_numbers[i] != sort_numbers[i - 1]) and (sort_numbers[i] != sort_numbers[i+1]):
+        new_numbers.append(sort_numbers[i])
+print(new_numbers)   '''
+
+numbers = [1, 2, 3, 3, 5, 7, 0, 2, 4, 5, 9, 7, 8]
+numbers = set(numbers)
+numbers = list(numbers)
+numbers = sorted(numbers)
+print(numbers)
