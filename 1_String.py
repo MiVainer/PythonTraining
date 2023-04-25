@@ -86,7 +86,7 @@ def first_last(letter, st):
 
 st = 'dsfjkhsldjfhjksdfbljsdfkbsfbsf'
 letter = 's'
-print(first_last(letter, st))'''
+print(first_last(letter, st))
 
 # Сформировать строку из элементов таблицы Unicod (Прописные и строчные буквы русского языка)
 a = ""
@@ -97,5 +97,13 @@ for i in range(1040, 1103 + 1):
 print(*a, sep=', ')
 
 
+def reverse_words(a):
+    return " ".join(a.split()[::-1]) # Join объединяет любой итеррируемый объект в строку (в данном случае метод split переводит строку в список и меняет порядок слов.
+
+a = "my name is Mihail"
+print(reverse_words(a))'''
+
+a = "my name is Mihail"
+print("/".join(a.split()[::-1]))
 
 

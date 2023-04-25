@@ -121,10 +121,11 @@ print(f'Вот сортированный по возрастанию иском
 for i in range(0, len(sort_numbers)-1):
     if (sort_numbers[i] != sort_numbers[i - 1]) and (sort_numbers[i] != sort_numbers[i+1]):
         new_numbers.append(sort_numbers[i])
-print(new_numbers)   '''
+print(new_numbers) 
 
 numbers = [1, 2, 3, 3, 5, 7, 0, 2, 4, 5, 9, 7, 8]
 numbers = set(numbers)
 numbers = list(numbers)
 numbers = sorted(numbers)
-print(numbers)
+print(numbers)'''
+
