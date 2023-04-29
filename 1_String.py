@@ -104,6 +104,7 @@ a = "my name is Mihail"
 print(reverse_words(a))'''
 
 a = "my name is Mihail"
+print(a.split()) # split преобразует в список
 print("/".join(a.split()[::-1]))
 
 
