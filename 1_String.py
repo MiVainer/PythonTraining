@@ -101,10 +101,25 @@ def reverse_words(a):
     return " ".join(a.split()[::-1]) # Join объединяет любой итеррируемый объект в строку (в данном случае метод split переводит строку в список и меняет порядок слов.
 
 a = "my name is Mihail"
-print(reverse_words(a))'''
+print(reverse_words(a))
 
 a = "my name is Mihail"
 print(a.split()) # split преобразует в список
 print("/".join(a.split()[::-1]))
 
+a = 'sumk111a is 123musora123'
 
+print(f'количество вхождений в строку символа a = {a.count("i")}')'''
+
+#Принимает строку с адресом сайта и выводит имя домена
+url = "www.yandex.ru"
+#Вариант № 1
+#a = url.split(".")
+#del a[-1]
+#del a[0]
+#print(a)
+
+#Вариант № 2
+import re
+a = re.match(r"^(?:https?:\/\/)?(?:www\.)?(?P<sub>[^:\/]+[a-z0-9-]+)?(?:[\.]+)(?P<domain>[a-z0-9-]+)?(?:\.)(?P<ext>[a-z0-9-]+)", url)['domain']
+print(a)

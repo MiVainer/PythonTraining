@@ -1,7 +1,6 @@
 # -------------------------#
 # ---Program by MiVainer---#
 import csv
-import re
 
 with open("/home/mihail/parsing/SharkTest.csv", encoding='utf-8') as r_file:
     file_reader = csv.reader(r_file, delimiter=",") # Создаем объект reader, указываем символ-разделитель ","
