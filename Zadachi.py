@@ -72,14 +72,23 @@ print(count_it(sequence))
 # Если что-то в тексте не является буквой, игнорируйте это и не возвращайте.
 # «a» = 1, «b» = 2 и т.д.
 
-alpha="The sunset sets at twelve o' clock."
+'''alpha="The sunset sets at twelve o' clock."
 a = []
 for i in alpha.lower():
     if i.isalpha() == True:
         a.append(str(ord(i)-96))
 
 print(alpha)
-print(", ".join(a))CSW
+print(", ".join(a))'''
+
+# функция, которая путём перестановки цифр возвращает наибольшее число
+
+def BiggerNum(num):
+    a = "".join(sorted(list(str(num)))[::-1])
+    return a
+
+num = 123777
+print(BiggerNum(num))
 
 
 
